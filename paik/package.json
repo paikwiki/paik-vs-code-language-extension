@@ -1,0 +1,37 @@
+{
+  "name": "paik",
+  "displayName": "%displayName%",
+  "description": "%description%",
+  "version": "0.0.1",
+  "publisher": "vscode",
+  "license": "MIT",
+  "engines": {
+    "vscode": "*"
+  },
+  "scripts": {},
+  "contributes": {
+    "languages": [
+      {
+        "id": "paik",
+        "extensions": [
+          ".paik",
+          "*.paik.?"
+        ],
+        "aliases": [
+          "Paik"
+        ]
+      }
+    ],
+    "grammars": [
+      {
+        "language": "paik",
+        "scopeName": "text.paik",
+        "path": "./syntaxes/paik.tmLanguage.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}
