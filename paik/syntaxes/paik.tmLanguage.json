@@ -3,5 +3,50 @@
   "version": "",
   "name": "Paik file",
   "scopeName": "text.paik",
-  "patterns": []
+  "patterns": [
+    {
+      "name": "meta.indent.level10.paik",
+      "match": "^[ ]{20,}\\S.*$"
+    },
+    {
+      "name": "meta.indent.level9.paik",
+      "match": "^[ ]{18}[^ ].*$"
+    },
+    {
+      "name": "meta.indent.level8.paik",
+      "match": "^[ ]{16}[^ ].*$"
+    },
+    {
+      "name": "meta.indent.level7.paik",
+      "match": "^[ ]{14}[^ ].*$"
+    },
+    {
+      "name": "meta.indent.level6.paik",
+      "match": "^[ ]{12}[^ ].*$"
+    },
+    {
+      "name": "meta.indent.level5.paik",
+      "match": "^[ ]{10}[^ ].*$"
+    },
+    {
+      "name": "meta.indent.level4.paik",
+      "match": "^[ ]{8}[^ ].*$"
+    },
+    {
+      "name": "meta.indent.level3.paik",
+      "match": "^[ ]{6}[^ ].*$"
+    },
+    {
+      "name": "meta.indent.level2.paik",
+      "match": "^[ ]{4}[^ ].*$"
+    },
+    {
+      "name": "meta.indent.level1.paik",
+      "match": "^[ ]{2}[^ ].*$"
+    },
+    {
+      "name": "meta.indent.level0.paik",
+      "match": "^\\S.*$"
+    }
+  ]
 }

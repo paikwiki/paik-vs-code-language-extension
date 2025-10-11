@@ -22,8 +22,119 @@ Visual Studio Code(VS Code)에서 "paik" 문법을 사용하기 위해 생성한
 
 ## 사용법
 
+### 설치
+
 - `paik` 폴더를 VS Code 익스텐션 폴더에 추가합니다.
   - 익스텐션 폴더 위치(Mac): `/Applications/Visual Studio Code.app/Contents/Resources/app/extensions`
+- VS Code를 재시작합니다.
+
+### 들여쓰기 레벨별 색상 적용
+
+이 확장팩은 들여쓰기 레벨(0~10)을 인식하여 각각 다른 scope를 부여합니다. 들여쓰기 레벨마다 다른 색상을 적용하려면 VS Code의 `settings.json`에 다음과 같이 설정을 추가하세요:
+
+1. VS Code에서 `Command Palette` 열기 (`Cmd+Shift+P` 또는 `Ctrl+Shift+P`)
+2. `Preferences: Open User Settings (JSON)` 선택
+3. **최상위 레벨**에 다음 설정 추가 (**주의:** `[paik]` 같은 언어별 설정 섹션 안에 넣으면 안 됩니다):
+
+```json
+{
+  // 기존 설정들...
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "meta.indent.level0.paik",
+        "settings": {
+          "foreground": "#7F8C8D"
+        }
+      },
+      {
+        "scope": "meta.indent.level1.paik",
+        "settings": {
+          "foreground": "#9B59B6"
+        }
+      },
+      {
+        "scope": "meta.indent.level2.paik",
+        "settings": {
+          "foreground": "#3498DB"
+        }
+      },
+      {
+        "scope": "meta.indent.level3.paik",
+        "settings": {
+          "foreground": "#1ABC9C"
+        }
+      },
+      {
+        "scope": "meta.indent.level4.paik",
+        "settings": {
+          "foreground": "#2ECC71"
+        }
+      },
+      {
+        "scope": "meta.indent.level5.paik",
+        "settings": {
+          "foreground": "#F1C40F"
+        }
+      },
+      {
+        "scope": "meta.indent.level6.paik",
+        "settings": {
+          "foreground": "#F39C12"
+        }
+      },
+      {
+        "scope": "meta.indent.level7.paik",
+        "settings": {
+          "foreground": "#E67E22"
+        }
+      },
+      {
+        "scope": "meta.indent.level8.paik",
+        "settings": {
+          "foreground": "#E74C3C"
+        }
+      },
+      {
+        "scope": "meta.indent.level9.paik",
+        "settings": {
+          "foreground": "#C0392B"
+        }
+      },
+    ]
+  },
+
+  // 다른 설정들...
+  "[paik]": {
+    "editor.tabSize": 2
+  }
+}
+```
+
+**참고:**
+- 위 색상 코드는 VS Code의 Dark+ 테마를 기준으로 한 예시입니다.
+- 원하는 색상으로 자유롭게 변경할 수 있습니다.
+- 들여쓰기는 공백 2칸을 기준으로 합니다 (level 1 = 2칸, level 2 = 4칸, ...)
+- 최대 레벨은 10입니다 (20칸 이상의 들여쓰기는 모두 level 10으로 표시)
+
+### 예시
+
+다음과 같은 `example.paik.txt` 파일을 만들어 테스트해볼 수 있습니다:
+
+```
+프로젝트 관리
+  할 일
+    기능 개발
+      로그인 기능
+      회원가입 기능
+    버그 수정
+      레이아웃 깨짐
+  완료된 작업
+    설계
+    환경 설정
+```
+
+각 줄의 들여쓰기 레벨에 따라 다른 색상으로 표시됩니다.
 
 ## 앞으로의 계획
 
