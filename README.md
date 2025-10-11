@@ -36,7 +36,7 @@ Visual Studio Code(VS Code)에서 "paik" 문법을 사용하기 위해 생성한
 2. `Preferences: Open User Settings (JSON)` 선택
 3. **최상위 레벨**에 다음 설정 추가 (**주의:** `[paik]` 같은 언어별 설정 섹션 안에 넣으면 안 됩니다):
 
-```json
+```jsonc
 {
   // 기존 설정들...
   "editor.tokenColorCustomizations": {
@@ -101,6 +101,18 @@ Visual Studio Code(VS Code)에서 "paik" 문법을 사용하기 위해 생성한
           "foreground": "#C0392B"
         }
       },
+      {
+        "scope": "meta.code-block.content.paik",
+        "settings": {
+          "foreground": "#999999"
+        }
+      },
+      {
+        "scope": "punctuation.definition.code-block.paik",
+        "settings": {
+          "foreground": "#666666"
+        }
+      }
     ]
   },
 
@@ -112,10 +124,10 @@ Visual Studio Code(VS Code)에서 "paik" 문법을 사용하기 위해 생성한
 ```
 
 **참고:**
-- 위 색상 코드는 VS Code의 Dark+ 테마를 기준으로 한 예시입니다.
-- 원하는 색상으로 자유롭게 변경할 수 있습니다.
+- 위 색상 코드는 예시이며, 원하는 색상으로 자유롭게 변경할 수 있습니다.
 - 들여쓰기는 공백 2칸을 기준으로 합니다 (level 1 = 2칸, level 2 = 4칸, ...)
 - 최대 레벨은 10입니다 (20칸 이상의 들여쓰기는 모두 level 10으로 표시)
+- 코드 블록(```` ``` ````)으로 감싼 영역은 들여쓰기와 무관하게 회색(#999999)으로 표시됩니다
 
 ### 예시
 
@@ -132,9 +144,17 @@ Visual Studio Code(VS Code)에서 "paik" 문법을 사용하기 위해 생성한
   완료된 작업
     설계
     환경 설정
+  코드 샘플
+    ```
+    function hello() {
+      console.log("Hello, Paik!");
+    }
+    ```
 ```
 
-각 줄의 들여쓰기 레벨에 따라 다른 색상으로 표시됩니다.
+**색상 표시:**
+- 각 줄의 들여쓰기 레벨에 따라 다른 색상으로 표시됩니다
+- ```` ``` ```` 구분자로 감싼 코드 블록은 들여쓰기와 무관하게 회색으로 표시됩니다
 
 ## 앞으로의 계획
 

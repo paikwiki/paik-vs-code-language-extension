@@ -5,6 +5,166 @@
   "scopeName": "text.paik",
   "patterns": [
     {
+      "name": "markup.raw.block.paik",
+      "begin": "^                  ```",
+      "end": "^                  ```",
+      "contentName": "meta.code-block.content.paik",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.code-block.paik"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.code-block.paik"
+        }
+      }
+    },
+    {
+      "name": "markup.raw.block.paik",
+      "begin": "^                ```",
+      "end": "^                ```",
+      "contentName": "meta.code-block.content.paik",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.code-block.paik"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.code-block.paik"
+        }
+      }
+    },
+    {
+      "name": "markup.raw.block.paik",
+      "begin": "^              ```",
+      "end": "^              ```",
+      "contentName": "meta.code-block.content.paik",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.code-block.paik"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.code-block.paik"
+        }
+      }
+    },
+    {
+      "name": "markup.raw.block.paik",
+      "begin": "^            ```",
+      "end": "^            ```",
+      "contentName": "meta.code-block.content.paik",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.code-block.paik"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.code-block.paik"
+        }
+      }
+    },
+    {
+      "name": "markup.raw.block.paik",
+      "begin": "^          ```",
+      "end": "^          ```",
+      "contentName": "meta.code-block.content.paik",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.code-block.paik"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.code-block.paik"
+        }
+      }
+    },
+    {
+      "name": "markup.raw.block.paik",
+      "begin": "^        ```",
+      "end": "^        ```",
+      "contentName": "meta.code-block.content.paik",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.code-block.paik"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.code-block.paik"
+        }
+      }
+    },
+    {
+      "name": "markup.raw.block.paik",
+      "begin": "^      ```",
+      "end": "^      ```",
+      "contentName": "meta.code-block.content.paik",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.code-block.paik"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.code-block.paik"
+        }
+      }
+    },
+    {
+      "name": "markup.raw.block.paik",
+      "begin": "^    ```",
+      "end": "^    ```",
+      "contentName": "meta.code-block.content.paik",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.code-block.paik"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.code-block.paik"
+        }
+      }
+    },
+    {
+      "name": "markup.raw.block.paik",
+      "begin": "^  ```",
+      "end": "^  ```",
+      "contentName": "meta.code-block.content.paik",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.code-block.paik"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.code-block.paik"
+        }
+      }
+    },
+    {
+      "name": "markup.raw.block.paik",
+      "begin": "^```",
+      "end": "^```",
+      "contentName": "meta.code-block.content.paik",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.code-block.paik"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.code-block.paik"
+        }
+      }
+    },
+    {
       "name": "meta.indent.level10.paik",
       "match": "^[ ]{20,}\\S.*$"
     },
