@@ -14,8 +14,8 @@
       {
         "id": "paik",
         "extensions": [
-          ".paik",
-          "*.paik.?"
+          ".paik.txt",
+          ".paik"
         ],
         "aliases": [
           "Paik"
