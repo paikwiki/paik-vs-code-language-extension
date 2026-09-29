@@ -24,9 +24,22 @@ Visual Studio Code(VS Code)에서 "paik" 문법을 사용하기 위해 생성한
 
 ### 설치
 
-- `paik` 폴더를 VS Code 익스텐션 폴더에 추가합니다.
-  - 익스텐션 폴더 위치(Mac): `/Applications/Visual Studio Code.app/Contents/Resources/app/extensions`
-- VS Code를 재시작합니다.
+VSIX 파일로 패키징한 뒤 설치합니다. Node.js와 VS Code의 `code` 명령이 필요합니다.
+
+```bash
+cd paik
+npx @vscode/vsce package --allow-missing-repository
+code --install-extension paik-0.0.1.vsix
+```
+
+- 설치 후 VS Code를 재시작하거나, `Command Palette`에서 `Developer: Reload Window`를 실행합니다.
+
+### 파일 확장자가 인식되지 않는 경우
+
+`.paik.txt` 파일이 일반 텍스트로 열린다면 확장팩이 설치되어 있지 않은 상태일 가능성이 큽니다.
+
+1. `code --list-extensions`의 결과에 `vscode.paik`이 있는지 확인합니다.
+2. 설치되어 있는데도 인식되지 않으면 VS Code 하단의 언어 모드 선택기에서 "Paik"을 직접 선택합니다.
 
 ### 들여쓰기 레벨별 색상 적용
 
@@ -167,3 +180,7 @@ Visual Studio Code(VS Code)에서 "paik" 문법을 사용하기 위해 생성한
 - 이 언어팩은 "Log" 파일에 대한 언어팩을 참고하여 제작했습니다.
   - 이 과정에서 일부 설정 데이터를 삭제한 후, 빈 값으로 남겨둔 상태입니다.
   - 참고: https://github.com/microsoft/vscode/tree/83b909c39f0ce5368d3a41a30c609de86a2e106e/extensions/log
+
+## 라이선스
+
+[MIT License](./LICENSE)
